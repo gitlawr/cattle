@@ -30,7 +30,7 @@ public class ServiceProxyManager extends AbstractNoOpResourceManager {
             request.setResponseCode(ResponseCodes.NOT_FOUND);
             return null;
         }
-
+        request.setMethod("GET");
         String[] parts = StringUtils.split(service, ".", 2);
         List<? extends Instance> instances = null;
 
